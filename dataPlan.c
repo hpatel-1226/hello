@@ -21,7 +21,7 @@
     int remaining_day;
 
 
-    printf("Enter the number of Gb in the plan per 30 day period, the current day in the plan period and total number of  GB used so far: \n");
+    printf("Enter the number of Gb in the plan per 30 day period, the current day in the plan period and total number of GB used so far: \n");
     scanf("%lf %d %lf", &total_GB, &current_day, &used_GB);
 
     remaining_day = total_period - current_day;
