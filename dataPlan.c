@@ -47,7 +47,7 @@
         double projected_total = current_average * total_period;
         double overage = projected_total - total_GB;
         printf("You are EXCEEDING your average daily use %.3f GB/day. \n", allowed_average);
-        printf("Continuing this high usage, you will exceed ");
+        printf("Continuing this high usage, you will exceed your data plan by %.3f GB\n", overage);
       }
 
     }
