@@ -50,7 +50,7 @@
       printf("Continuing this high usage, you will exceed your data plan by \n%.2lf GB.\n", overage);
     }
     else if (current_average < allowed_average) {
-      printf("You are below your average daily use %.2lf GB/day\n", allowed_average);
+      printf("You are at or below your average daily use (%.2lf GB/day)\n", allowed_average);
     }
     else {
       printf("You are right on your average daily use %.2lf GB/day\n", allowed_average);
