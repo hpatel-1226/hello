@@ -37,8 +37,16 @@
     printf("%d days used, %d days remaining\n", current_day, remaining_day);
     printf("Average daily use: %.3f GB/day\n", current_average);
 
-    else if (used_GB >= total_GB) {
+    if (used_GB >= total_GB) {
       printf("You have already met your limit for this month. Looks like you're getting some overage charges...\n");
+    }
+    else {
+      printf("You have %.3f GB left.\n", remaining_GB);
+
+      if (current_average > allowed_) {
+
+      }
+
     }
 
 
