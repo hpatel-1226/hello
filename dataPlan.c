@@ -35,7 +35,7 @@
     double remaining_GB = total_GB - used_GB;
 
     printf("%d days used, %d days remaining\n", current_day, remaining_day);
-    printf("Average daily use: %.3f GB/day\n", current_average);
+    printf("Average daily use: %.2lf GB/day\n", current_average);
 
     if (used_GB >= total_GB) {
       printf("You have already met your limit for this month. Looks like you're getting some overage charges...\n");
@@ -43,18 +43,18 @@
     else {
       printf("You have %.3f GB left.\n", remaining_GB);
 
-      if (current_average > allowed_average) {
-        double projected_total = current_average * total_period;
-        double overage = projected_total - total_GB;
-        printf("You are EXCEEDING your average daily use %.3f GB/day. \n", allowed_average);
-        printf("Continuing this high usage, you will exceed your data plan by %.3f GB\n", overage);
-      }
-      else if (current_average < allowed_average) {
-        printf("You are below your average daily use %.3f GB/day\n", allowed_average);
-      }
-      else {
-        printf("You are right on your average daily use %.3f GB/day\n", allowed_average);
-      }
+    if (current_average > allowed_average) {
+      double projected_total = current_average * total_period;
+      double overage = projected_total - total_GB;
+      printf("You are EXCEEDING your average daily use %.3f GB/day. \n", allowed_average);
+      printf("Continuing this high usage, you will exceed your data plan by %.3f GB\n", overage);
+    }
+    else if (current_average < allowed_average) {
+      printf("You are below your average daily use %.3f GB/day\n", allowed_average);
+    }
+    else {
+      printf("You are right on your average daily use %.3f GB/day\n", allowed_average);
+    }
       double safe_remaining_average = remaining_GB / remaining_day;
       printf("To stay under your plan, you can use up to %.3f GB/day for the rest of the 30 day period\n", safe_remaining_average);
     }
