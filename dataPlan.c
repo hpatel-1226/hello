@@ -31,7 +31,7 @@
     }
 
     double current_average = used_GB / current_day;
-    double allowed_average = totalGB / total_period;
+    double allowed_average = total_GB / total_period;
     double remaining_GB = total_GB - used_GB;
 
     printf("%d days used, %d days remaining\n", current_day, remaining_day);
@@ -53,7 +53,7 @@
         printf("You are below your average daily use %.3f GB/day\n", allowed_average);
       }
       else {
-        printf("You are right on your average daily use .3f GB/day\n", allowed_average);
+        printf("You are right on your average daily use %.3f GB/day\n", allowed_average);
       }
       double safe_remaining_average = remaining_GB / remaining_day;
       printf("To stay under your plan, you can use up to %.3f GB/day for the rest of the 30 day period\n", safe_remaining_average);
@@ -62,11 +62,3 @@
     return 0;
   }
 
-
-
-
-
-
-
-
- }
