@@ -53,9 +53,10 @@
         printf("You are below your average daily use %.3f GB/day\n", allowed_average);
       }
       else {
-        printf("");
+        printf("You are right on your average daily use .3f GB/day\n", allowed_average);
       }
-
+      double safe_remaining_average = remaining_GB / remaining_day;
+      printf("To stay under your plan, you can use up to ");
     }
 
 
