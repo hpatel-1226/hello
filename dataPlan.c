@@ -52,7 +52,9 @@
       else if (current_average < allowed_average) {
         printf("You are below your average daily use %.3f GB/day\n", allowed_average);
       }
-      else 
+      else {
+        printf("");
+      }
 
     }
 
