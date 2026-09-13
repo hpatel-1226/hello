@@ -44,7 +44,9 @@
       printf("You have %.3f GB left.\n", remaining_GB);
 
       if (current_average > allowed_average) {
-        double projected_total = current_average * 
+        double projected_total = current_average * total_period;
+        double overage = projected_total - total_GB;
+        printf("You are EXCEEDING your average daily use %.3f GB/day. \n", allowed_average);
       }
 
     }
