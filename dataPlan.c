@@ -43,8 +43,8 @@
     else {
       printf("You have %.3f GB left.\n", remaining_GB);
 
-      if (current_average > allowed_) {
-
+      if (current_average > allowed_average) {
+        double projected_total = current_average * 
       }
 
     }
